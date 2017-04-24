@@ -12,7 +12,7 @@ int main() {
 	scanf("%d",&minutos);
 	printf("Ingresar la cantidad de segundos\n");
 	scanf("%d",&segundos);
-	//1hr = 60min y 1min = 60sec
+	/*1hr = 60min y 1min = 60sec*/
 	totalEnSegundos = segundos + (minutos*60) + (horas*60*60);
 	printf("El total en segundos es: %d",totalEnSegundos);
 	return 0;

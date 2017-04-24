@@ -9,7 +9,7 @@
 int main(){
 	float racion1,racion2,total;
 	printf("Ingresar el peso de la ración 1 y 2, separados por coma \n");
-	//& = referencia a la variable
+	/*& = referencia a la variable*/
 	scanf("%f,%f",&racion1,&racion2);
 	total = racion1 + racion2;
 	printf("Ración diaria: %.2f\n",total);

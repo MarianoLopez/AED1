@@ -12,7 +12,7 @@ int main() {
 	scanf("%d",&centimetros);
 	printf("Ingresar la cantidad de milímetros\n");
 	scanf("%d",&milimetros);
-	//1 metro = 100 centímetros y 1 centímetro = 10 milímetros
+	/*1 metro = 100 centímetros y 1 centímetro = 10 milímetros*/
 	totalEnMilimetros = milimetros + (centimetros*10) + (metros*100*10);
 	printf("El total en milímetros es: %d",totalEnMilimetros);
 	return 0;

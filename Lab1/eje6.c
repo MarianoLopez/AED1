@@ -9,7 +9,7 @@ int main(){
 	printf("Ingresa la cantidad de alumnos aprobados y el total de alumnos, separados por coma\n");
 	scanf("%d , %d",&alumnosAprobados, &totalAlumnos);
 	porcentajeAprobados = (alumnosAprobados*100)/totalAlumnos;
-	//%% = escapar al formateador 
+	/*%% = escapar al formateador */
 	printf("El porcentaje de aprobados es de %d%%",porcentajeAprobados);
 	return 0;
 }
