@@ -10,6 +10,7 @@ Ingresar base y altura = 0 para indicar el fin de datos.
 		Una función para visualizar los resultados.
 */
 #include <stdio.h>
+#define CENTINELA 0
 void ingresarDatos();
 float getArea();
 float getPerimetro();
@@ -20,7 +21,7 @@ float base, altura;
 
 int main(){
 	ingresarDatos();
-	while(base!=0||altura!=0){
+	while(base!=CENTINELA||altura!=CENTINELA){
 		print();
 		ingresarDatos();
 	}
@@ -28,7 +29,7 @@ int main(){
 }
 
 void ingresarDatos(){
-	printf("Ingresar base y altura, separados por coma (0,0 = fin): ");
+	printf("Ingresar base y altura, separados por coma (%d,%d = fin): ",CENTINELA,CENTINELA);
 	scanf("%f,%f",&base,&altura);
 }
 

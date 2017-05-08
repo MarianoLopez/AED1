@@ -4,7 +4,7 @@ Utilice una función que devuelva el valor del cubo para cada número.
 */
 #include <stdio.h>
 #include <math.h>
-int getCubo(int n);
+int getCubo(int base);
 int getCuboMath(int n);
 
 int main(){
@@ -19,11 +19,11 @@ int main(){
 	}
 	return 0;
 }
-int getCuboMath(int n){
-	return (int)pow(n,3);
+int getCuboMath(int base){
+	return (int)pow(base,3);
 }
-int getCubo(int n){
-	return n*n*n;
+int getCubo(int base){
+	return base*base*base;
 }
 
 

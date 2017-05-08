@@ -7,24 +7,27 @@ informar con una leyenda si el número introducido es positivo o no. (Incluir la 
 */
 #include <stdio.h>
 #include <stdbool.h>
+#define CENTINELA 0
 bool isPositivo(int n);
+void ingresarNumero(int *n);/*notar que el parámetro n es un puntero "*" del tipo int*/
 
 int main(){
 	int num;
-	printf("Ingresar número (0 = fin): ");
-	scanf("%d",&num);
-	while(num!=0){
+	ingresarNumero(&num);/*notar el "&" para enviar como argumento la dirección de memoria*/
+	while(num!=CENTINELA){
 		if(isPositivo(num)){
 			printf("\tNúmero positivo\n");
 		}else{
 			printf("\tNúmero negativo\n");	
 		}
-		printf("Ingresar número (0 = fin): ");
-		scanf("%d",&num);
+		ingresarNumero(&num);
 	}
 	return 0;
 }
-
+void ingresarNumero(int *n){
+	printf("Ingresar número (%d = fin): ",CENTINELA);
+	scanf("%d",n);/*notar la falta de "&", dado que el parámetro n es una dirección de memoria*/
+}
 bool isPositivo(int n){
 	return (n>0);
 }

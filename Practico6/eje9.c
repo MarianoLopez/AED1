@@ -3,21 +3,32 @@
 función para cada operación (suma, resta, multiplicación y división) que retorne el resultado. 
 */
 #include <stdio.h>
-
-#define A 50
-#define B 70
-
+#define CENTINELA 0
+void ingresarDatos(int *, int *);
+void procesarEimprimir(int, int);
 int suma(int,int);
 int resta(int,int);
 float division(int,int);
 int multiplicacion(int,int);
 
 int main(){
-	printf("%d + %d = %d\n",A,B,suma(A,B));
-	printf("%d - %d = %d\n",A,B,resta(A,B));
-	printf("%d / %d = %.2f\n",A,B,division(A,B));
-	printf("%d * %d = %d\n",A,B,multiplicacion(A,B));
+	int a,b;
+	ingresarDatos(&a,&b);	
+	while(a!=CENTINELA||b!=CENTINELA){
+		procesarEimprimir(a,b);
+		ingresarDatos(&a,&b);	
+	}
 	return 0;
+}
+void procesarEimprimir(int a, int b){
+	printf("\t%d + %d = %d\n",a,b,suma(a,b));
+	printf("\t%d - %d = %d\n",a,b,resta(a,b));
+	printf("\t%d / %d = %.2f\n",a,b,division(a,b));
+	printf("\t%d * %d = %d\n\n",a,b,multiplicacion(a,b));
+}
+void ingresarDatos(int *a, int *b){
+	printf("Ingresar 2 números enteros, separados por coma (%d,%d = fin): ",CENTINELA,CENTINELA);
+	scanf("%d,%d",a,b);
 }
 
 int suma(int a, int b){

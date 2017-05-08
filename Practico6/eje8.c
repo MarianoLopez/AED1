@@ -4,20 +4,24 @@ Celsius. Considere que la fórmula de conversión de grados Fahrenheit a Celsius e
 Celsius = 5/9 (Fahrenheit- 32)
 */
 #include <stdio.h>
+#define CENTINELA 99999
 float fahrenheitToCelsius(float f);
+void ingresarFahrenheit(float *f);/*notar que el parámetro f es un puntero "*" del tipo float*/
 
 int main(){
 	float fahrenheit;
-	printf("Ingresar temperatura Fahrenheit (99999 = fin): ");
-	scanf("%f",&fahrenheit);
-	while(fahrenheit!=99999){
+	
+	ingresarFahrenheit(&fahrenheit);
+	while(fahrenheit!=CENTINELA){
 		printf("\tCelsius: %.2f\n",fahrenheitToCelsius(fahrenheit));
-		printf("Ingresar temperatura Fahrenheit (99999 = fin): ");
-		scanf("%f",&fahrenheit);
+		ingresarFahrenheit(&fahrenheit);	
 	}
 	return 0;
 }
-
+void ingresarFahrenheit(float *f){
+	printf("Ingresar temperatura Fahrenheit (%d = fin): ",CENTINELA);
+	scanf("%f",f);
+}
 float fahrenheitToCelsius(float f){
 	return 5/(float)9 *(f- 32);
 }

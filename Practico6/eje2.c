@@ -5,14 +5,21 @@ mostrar el siguiente mensaje: “*****Buenas tardes*****”
 */
 #include <stdio.h>
 void imprimirAsteriscos();
+void imprimirSaludo();
 
 int main(){
+	imprimirSaludo();
+	return 0;
+}
+void imprimirSaludo(){
 	imprimirAsteriscos();
 	printf("Buenas tardes");
 	imprimirAsteriscos();
-	return 0;
 }
-
 void imprimirAsteriscos(){
-	printf("*****");
+	/* variable local */
+	int i;
+	for(i=0;i<5;i++){
+		printf("*");
+	}
 }
