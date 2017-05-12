@@ -17,7 +17,7 @@ int main(){
 	int acumuladorServiciosBrasil = 0;
 	int acumuladorServiciosVendidos = 0;
 	
-	printf("Ingresar Destino (A-Argentina, B-Brasil, P-Paraguay, P-Perú, X- fin del programa): ");
+	printf("Ingresar Destino (A-Argentina, B-Brasil, U-Uruguay, P-Perú, X- fin del programa): ");
 	scanf("%c",&destino);
 	while(destino!='X'&&destino!='x'){
 		
@@ -38,7 +38,7 @@ int main(){
 		}
 	
 		fflush(stdin);
-		printf("Ingresar Destino (A-Argentina, B-Brasil, P-Paraguay, P-Perú, X- fin del programa): ");
+		printf("Ingresar Destino (A-Argentina, B-Brasil, U-Uruguay, P-Perú, X- fin del programa): ");
 		scanf("%c",&destino);
 	}/*fin while*/
 	

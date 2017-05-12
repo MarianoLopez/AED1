@@ -8,6 +8,7 @@ El programa debe contener las siguientes funciones:
 #include <stdio.h>
 #include <math.h>
 #define CENTINELA 0
+/*#define M_PI 3.14159265358979323846264338327*//*M_PI is not defined in standard C ANSI*/
 void ingresarRadio(float *);
 float getArea(float radio);
 void print(float radio, float area);
