@@ -1,3 +1,7 @@
+#archivos creados
+*.txt
+*.dat
+
 # Object files
 *.o
 *.ko
