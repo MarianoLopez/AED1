@@ -98,7 +98,6 @@ void ejemploLecturaBinaria(){
 	Producto producto;
 	FILE *fichero = abrirArchivoMercaderias();
 	if(fichero != NULL){/*verificar si mercaderia.dat existe*/
-		/*fread(&producto, sizeof(producto), 1, fichero);/* lee primer registro del archivo alumnos */
 		printf("codSucursal\tcodProducto\tstock\tstockMinimo");
 		leerProducto(&producto,fichero);
 		while(!feof(fichero)) {/*mientras no sea el fin de archivo*/
