@@ -16,6 +16,8 @@ int main(){
 	fputs("y esta es continuación de la anterior\n", fichero);
 	
 	fclose(fichero);/*cierre de archivo*/
+	
+	printf("Archivo prueba.txt creado");
 	return 0;
 }
 

@@ -1,5 +1,5 @@
 #include<stdio.h>
-main(){
+int main(){
 	FILE *file; /* Puntero del tipo FILE */
 	char _char; /*variable para almacenar el carácter leido del archivo*/
 	

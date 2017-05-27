@@ -1,5 +1,5 @@
 #include<stdio.h>
-main(){
+int main(){
 	struct alumno { /* Define el registro alumno */
 		int dni;
 		float parcial1;
