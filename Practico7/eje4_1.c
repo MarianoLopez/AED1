@@ -77,8 +77,3 @@ void eliminarArchivo(){
       printf("Error al intentar eliminar el archivo %s\n",ARCHIVO);
    }
 }
-
-
-
-
-
